@@ -5,7 +5,7 @@ import serial
 ser = serial.Serial('COM3', 9600)  
 
 def read_angle():
-    ser.write(b'r')  
+    ser.write(b'200')  
     angle = ser.readline().decode().strip()
     messagebox.showinfo("Read Angle", f"Current Angle: {angle} degrees")
 
@@ -18,7 +18,7 @@ def write_angle():
         messagebox.showerror("Error", "Please enter a valid angle (0-180)")
 
 def save_angle():
-    ser.write(b's')  
+    ser.write(b'300')  
     messagebox.showinfo("Save Angle", "Current Angle saved to memory")
 
 
@@ -40,5 +40,6 @@ write_button.pack(pady=10)
 
 save_button = tk.Button(root, text="Save Angle", command=save_angle)
 save_button.pack(pady=10)
+
 
 root.mainloop()
