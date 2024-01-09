@@ -12,7 +12,7 @@ def read_angle():
 def write_angle():
     new_angle = entry.get()
     if new_angle.isdigit() and 0 < int(new_angle) < 180:
-        ser.write(f"w{new_angle}\n".encode()) 
+        ser.write(f"{new_angle}\n".encode()) 
         messagebox.showinfo("Write Angle", f"Angle set to {new_angle} degrees")
     else:
         messagebox.showerror("Error", "Please enter a valid angle (0-180)")
