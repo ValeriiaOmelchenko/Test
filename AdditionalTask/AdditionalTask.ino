@@ -8,7 +8,7 @@ Servo servo1;
 Servo servo2;
 Adafruit_ADXL345_Unified accel = Adafruit_ADXL345_Unified(12345);
 
-const uint8_t EEPROM_ADDRESS = 3;
+const uint8_t EEPROM_ADDRESS = 254;
 uint8_t angle;
 uint16_t command;
 bool autoFlag = 0;
